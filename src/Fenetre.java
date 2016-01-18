@@ -68,8 +68,8 @@ public class Fenetre extends JFrame{
 
     b1.addActionListener(new ActionListener(){
       public void actionPerformed(ActionEvent event){
-    	Test1.c=3;
-    	Test1.l=3;
+    	Execution.c=3;
+    	Execution.l=3;
         cl.next(content);
       }
     });
@@ -77,31 +77,31 @@ public class Fenetre extends JFrame{
     
     b2.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent event){
-        	Test1.c=4;
-        	Test1.l=4;
+        	Execution.c=4;
+        	Execution.l=4;
           cl.next(content);
         }
       });
     
     b3.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent event){
-        	Test1.c=5;
-        	Test1.l=5;
+        	Execution.c=5;
+        	Execution.l=5;
       	  cl.next(content);
         }
       });
     
     b4.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent event){
-        	Test1.c=6;
-        	Test1.l=6;
+        	Execution.c=6;
+        	Execution.l=6;
           cl.next(content);
         }
       });
     
     b5.addActionListener(new ActionListener(){
     	public void actionPerformed(ActionEvent event){
-    		Test1.typeJeu=0;
+    		Execution.typeJeu=0;
     		b = true;
     		dispose();
     		
@@ -110,7 +110,7 @@ public class Fenetre extends JFrame{
     
     b6.addActionListener(new ActionListener(){
     	public void actionPerformed(ActionEvent event){
-    		Test1.typeJeu=1;
+    		Execution.typeJeu=1;
     		b = true;
     		dispose();
     		
@@ -124,30 +124,30 @@ public class Fenetre extends JFrame{
   public void affichageGrille(int horizontale[][], int verticale[][]){
 	  StdDraw.clear();
 	  
-	  for(int i=0; i<Test1.l; i++){
-	    	for(int j=0; j<Test1.c; j++){
+	  for(int i=0; i<Execution.l; i++){
+	    	for(int j=0; j<Execution.c; j++){
 	    		StdDraw.filledCircle(20+j*40, 20+i*40, 1);
 	    	}
 	    }
 	    StdDraw.show();	
 	  
-	  for(int i=0; i<Test1.l; i++){
-		  for(int j=0; j<Test1.c-1; j++){
+	  for(int i=0; i<Execution.l; i++){
+		  for(int j=0; j<Execution.c-1; j++){
 			  if(horizontale[i][j]==1){
 				  StdDraw.filledRectangle(40+j*40, 20+i*40, 18, 1);
 			  }
 		  }
 		  
 	  }
-	  for(int i=0; i<Test1.l-1; i++){
-		  for(int j=0; j<Test1.c; j++){
+	  for(int i=0; i<Execution.l-1; i++){
+		  for(int j=0; j<Execution.c; j++){
 			  if(verticale[i][j]==1){
 				  StdDraw.filledRectangle(20+j*40, 40+i*40, 1, 18);
 			  }
 		  }
   }
-	  StdDraw.text(20, +0.98, "Points Joueur A: "+Test1.pointsA);
-	  StdDraw.text(100, +0.98, "Points Joueur B: "+Test1.pointsB);
+	  StdDraw.text(20, +0.98, "Points Joueur A: "+Execution.pointsA);
+	  StdDraw.text(100, +0.98, "Points Joueur B: "+Execution.pointsB);
 }
 
 
